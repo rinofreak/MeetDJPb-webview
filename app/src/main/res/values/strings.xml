@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MeetDJPb-beta</string>
+    <string name="powered_by">Powered by</string>
+    <string name="it_setditjen_djpb">IT Setditjen DJPb</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="permission_message">App ini menggunakan fungsi Kamera</string>
+    <string name="confirmation">App ini meminta ijin anda untuk mengakses fungsi:\n\n%s</string>
+    <string name="allow">Izinkan</string>
+    <string name="deny">Jangan</string>
+    <string name="hangup">Hangup</string>
+</resources>

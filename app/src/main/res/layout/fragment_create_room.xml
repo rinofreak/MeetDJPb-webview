@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_large">
+
+        <EditText
+            android:id="@+id/et_id_new_room"
+            style="@style/EditText.Flat.Grey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:background="@drawable/edit_text_round_bg_outline"
+            android:hint="Meeting ID"
+            android:minHeight="@dimen/spacing_xmlarge" />
+
+        <EditText
+            android:id="@+id/et_name_new_room"
+            style="@style/EditText.Flat.Grey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_middle"
+            android:background="@drawable/edit_text_round_bg_outline"
+            android:hint="Nama User"
+            android:minHeight="@dimen/spacing_xmlarge"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/spacing_xxlarge"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/spacing_medium"
+            android:paddingEnd="@dimen/spacing_medium">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kamera"
+                android:textColor="@color/grey_800"
+                android:textSize="18sp"/>
+
+            <View
+                android:layout_width="@dimen/spacing_middle"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sc_camera_new_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                app:thumbTint="@color/switch_color_primary" />
+
+            <View
+                android:layout_width="@dimen/spacing_middle"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/spacing_xxlarge"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/spacing_medium"
+            android:paddingEnd="@dimen/spacing_medium">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Microphone"
+                android:textColor="@color/grey_800"
+                android:textSize="18sp"/>
+
+            <View
+                android:layout_width="@dimen/spacing_middle"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sc_mic_new_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                app:thumbTint="@color/switch_color_primary" />
+
+            <View
+                android:layout_width="@dimen/spacing_middle"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_buat_room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_middle"
+            android:background="@drawable/btn_outline"
+            android:text="Buat Room"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAllCaps="false"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</ScrollView>

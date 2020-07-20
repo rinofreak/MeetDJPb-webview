@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.WebViewActivity">
+
+    <WebView
+        android:id="@+id/wv_room"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:gravity="end"
+        android:layout_margin="@dimen/spacing_smlarge">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_hangup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            app:fabSize="mini"
+            app:backgroundTint="@color/red_600"
+            app:tint="@android:color/white"
+            app:rippleColor="@color/grey_90"
+            app:srcCompat="@drawable/ic_call_end" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_hangup"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:text="Hangup"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:background="@drawable/btn_rounded_grey"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

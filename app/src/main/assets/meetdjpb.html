@@ -1,0 +1,82 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <style>
+	body {
+		margin: 0;            /* Reset default margin */
+	}
+	iframe {
+		display: block;       /* iframes are inline by default */
+		background: #000;
+		border: none;         /* Reset default border */
+		height: 100vh;        /* Viewport-relative units */
+		width: 100vw;
+	}
+</style>
+</head>
+
+<body>
+
+ <script src="https://meet.setditjen-djpb.net/external_api.js"></script>
+
+  <script>
+    var namaRoom = AndroidFunction.getRoomName();
+    var namaUser = AndroidFunction.getDisplayName();
+    var domain = "meet.setditjen-djpb.net";
+    var options = {
+      roomName: namaRoom,
+      width: "100%",
+      height: "100%",
+      parentNode: undefined,
+	  configOverwrite: {
+		disableDeepLinking: false,
+		fileRecordingsEnabled: false,
+		liveStreamingEnabled: false,
+		enableIceRestart: true,
+		roomPasswordNumberOfDigits: 6,
+		prejoinPageEnabled: false,
+		doNotStoreRoom: true,
+		roomPasswordNumberOfDigits: true,
+		desktopSharingChromeDisabled: true,
+		stereo: true,
+        disableAP: false,
+        disableAEC: false,
+        disableNS: true,
+        disableAGC: true,
+        disableHPF: true
+	  },
+      interfaceConfigOverwrite: {
+		DISABLE_JOIN_LEAVE_NOTIFICATIONS: true,
+		VERTICAL_FILMSTRIP: false,
+		DISABLE_VIDEO_BACKGROUND: true,
+		DEFAULT_BACKGROUND: '#124f83',
+	    TOOLBAR_BUTTONS: [
+			'microphone', 'camera', 'closedcaptions', 'desktop',
+			'fodeviceselection', 'profile', 'info', 'chat',
+			'livestreaming', 'etherpad', 'sharedvideo', 'settings', 'raisehand',
+			'videoquality', 'filmstrip', 'invite',
+			'tileview', 'mute-everyone'
+		],
+		SETTINGS_SECTIONS: [ 'devices','moderator', 'profile', 'calendar' ],
+		VIDEO_QUALITY_LABEL_DISABLED: true,
+		TILE_VIEW_MAX_COLUMNS: 2,
+      }
+    }
+
+    var api = new JitsiMeetExternalAPI(domain, options);
+
+    if (namaUser != null){
+        api.executeCommand('displayName', namaUser);
+    } else {
+        api.executeCommand('displayName', 'Insan DJPb');
+    }
+
+    function hangupMeeting() {
+        api.executeCommand('hangup');
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".activity.MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/splashscreen"
+            android:scaleType="center"/>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+
+        <ImageView
+            android:id="@+id/imgView_logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_djpb_putih"
+            android:layout_centerHorizontal="true"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgView_logo"
+            android:layout_marginTop="75dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_create_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif-medium"
+                android:background="@drawable/btn_rounded_orange"
+                android:text="Buat Room Baru"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_join_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="15dp"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif-medium"
+                android:background="@drawable/btn_rounded_orange"
+                android:backgroundTint="@color/amber_700"
+                android:layout_below="@+id/btn_create_room"
+                android:text="Join Room"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"/>
+
+        </RelativeLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/rl_button"
+            android:layout_marginTop="40dp">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Room Terakhir"
+                android:textColor="@android:color/white"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"/>
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="@dimen/spacing_large"
+                android:paddingEnd="@dimen/spacing_large">
+                
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_room"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/blue_web_tr"
+                    app:cardCornerRadius="@dimen/spacing_middle"
+                    app:cardElevation="3dp">
+
+                    <TextView
+                        android:id="@+id/tv_last_room"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="@string/app_name"
+                        android:paddingStart="@dimen/spacing_large"
+                        android:paddingEnd="@dimen/spacing_large"
+                        android:paddingTop="@dimen/spacing_xmedium"
+                        android:paddingBottom="@dimen/spacing_xmedium"
+                        style="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@android:color/white"
+                        android:textStyle="italic"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_no_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/white"
+                    android:text="Tidak ada room sebelumnya"
+                    android:textStyle="italic"/>
+            </RelativeLayout>
+            
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
